@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#6366F1">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+  <title>Quiz 1 - Teacher Dan's App</title>
+</head>
+<body>
+
+  <!-- UNIFIED Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="https://myteacherdan.com" class="navbar-brand">Teacher Dan's Classes</a>
+      <div class="navbar-menu">
+        <a href="https://myteacherdan.com">Home</a>
+        <a href="https://app.myteacherdan.com" class="active">App</a>
+        <a href="https://myteacherdan.com/schedule">Schedule</a>
+        <a href="https://myteacherdan.com/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page specific content -->
+  <div class="content-wrapper">
+    <h1>Quiz: Lesson 1</h1>
+    <p>
+      Test your knowledge from the first lesson. Choose the correct answer below.
+    </p>
+    <!-- Placeholder for quiz content -->
+    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #fff; border-radius: 8px; border: 1px solid #E5E7EB;">
+      <h3 style="margin-top:0;">Question 1: How do you pronounce "world"?</h3>
+      <!-- Add radio buttons or other inputs here -->
+    </div>
+  </div>
+
+</body>
+</html>

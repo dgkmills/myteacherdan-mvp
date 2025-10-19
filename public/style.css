@@ -1,0 +1,113 @@
+/* 1. FONT IMPORT & SETUP */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Define brand colors */
+  --brand-primary: #6366F1; /* Bright purple-blue from MVP button */
+  --brand-primary-dark: #4F46E5;
+  --text-dark: #374151; /* Dark gray for text */
+  --text-light: #6B7280;
+  --bg-light: #F9FAFB;
+  --border-color: #E5E7EB;
+}
+
+body {
+  /* 2. APPLY CONSISTENT FONT */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* 3. UNIFIED NAVIGATION BAR */
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem; /* 64px */
+  max-width: 80rem; /* 1280px */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Brand logo */
+.navbar-brand {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  color: #4338CA; /* Darker Indigo */
+  text-decoration: none;
+}
+
+/* Nav links */
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem; /* 24px */
+}
+
+.navbar-menu a {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding: 1.4rem 0.25rem;
+}
+
+.navbar-menu a:hover {
+  border-bottom-color: var(--border-color);
+  color: var(--text-dark);
+}
+
+/* Style for the "active" page link, e.g., the "App" link on the app page */
+.navbar-menu a.active {
+  border-bottom-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+
+/* 4. UNIFIED BUTTON STYLES */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem; /* 6px */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-primary-dark);
+}
+
+/* 5. UNIFIED CONTENT & TYPOGRAPHY */
+.content-wrapper {
+  max-width: 64rem; /* 1024px */
+  margin: 2.5rem auto; /* 40px auto */
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+p {
+  font-size: 1.125rem; /* 18px */
+  color: var(--text-light);
+  line-height: 1.6;
+}

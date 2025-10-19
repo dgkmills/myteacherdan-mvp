@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#6366F1">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js');
+      });
+    }
+  </script>
+  <title>Lesson 2 - Teacher Dan's App</title>
+</head>
+<body>
+
+  <!-- UNIFIED Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="https://myteacherdan.com" class="navbar-brand">Teacher Dan's Classes</a>
+      <div class="navbar-menu">
+        <a href="https://myteacherdan.com">Home</a>
+        <a href="https://app.myteacherdan.com" class="active">App</a>
+        <a href="https://myteacherdan.com/schedule">Schedule</a>
+        <a href="https://myteacherdan.com/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page specific content -->
+  <div class="content-wrapper">
+    <h1>Lesson 2: Common Phrases</h1>
+    <p>
+      Content for your second lesson. Focus on conversational English and common scenarios.
+    </p>
+    <a href="/quiz-1.html" class="btn btn-primary">Take the Quiz</a>
+  </div>
+
+</body>
+</html>

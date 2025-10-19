@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to your unified stylesheet (note the path is relative) -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <!-- Add PWA Manifest and SW links (relative path) -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#6366F1">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js');
+      });
+    }
+  </script>
+
+  <title>Lesson 1 - Teacher Dan's App</title>
+</head>
+<body>
+
+  <!-- UNIFIED Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="https://myteacherdan.com" class="navbar-brand">Teacher Dan's Classes</a>
+      <div class="navbar-menu">
+        <a href="https://myteacherdan.com">Home</a>
+        <a href="https://app.myteacherdan.com" class="active">App</a>
+        <a href="https://myteacherdan.com/schedule">Schedule</a>
+        <a href="https://myteacherdan.com/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page specific content -->
+  <div class="content-wrapper">
+    
+    <h1>Lesson 1: Pronunciation Basics</h1>
+    <p>
+      This is where your content for the first lesson will go. You can add videos, text, and interactive elements here.
+    </p>
+    
+    <!-- Example video placeholder -->
+    <div style="margin: 2rem 0; padding: 56.25% 0 0 0; position: relative; border: 1px solid #E5E7EB; border-radius: 8px; background-color: #f0f0f0;">
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #9CA3AF;">Your Video Here</p>
+    </div>
+
+    <a href="/lessons/lesson-2.html" class="btn btn-primary">Go to Lesson 2</a>
+
+  </div>
+
+</body>
+</html>
