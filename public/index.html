@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dan Online - Learn English in Thailand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest Link -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- PWA Theme Color -->
+    <meta name="theme-color" content="#4f46e5">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .aspect-w-16 { position: relative; padding-bottom: 56.25%; }
+        .aspect-h-9 { }
+        .aspect-w-16 > * { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">Teacher Dan Online</div>
+            <nav>
+                <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 px-3 py-2">How it Works</a>
+                <a href="#pricing" class="text-gray-600 hover:text-indigo-600 px-3 py-2">Pricing</a>
+                <a href="#" class="bg-indigo-600 text-white rounded-md px-4 py-2 hover:bg-indigo-700 transition">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-indigo-50 py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Master English Speaking with Confidence</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Interactive video lessons designed for Thai students. Start with 3 free lessons and see your progress immediately.</p>
+            <a href="#" class="mt-8 inline-block bg-indigo-600 text-white font-semibold rounded-lg px-8 py-3 text-lg hover:bg-indigo-700 transition shadow-lg">Start Your First Lesson Free</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">A Simple Path to Fluency</h2>
+                <p class="text-gray-600 mt-2">Our method is designed for real-world results, not just memorization.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Seamless Learning Flow</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 bg-indigo-500 text-white font-bold rounded-full flex items-center justify-center mr-4">1</span>
+                            <span>Watch the video lesson and listen to the pronunciation.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 bg-indigo-500 text-white font-bold rounded-full flex items-center justify-center mr-4">2</span>
+                            <span>Follow along with the interactive English/Thai transcript.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 bg-indigo-500 text-white font-bold rounded-full flex items-center justify-center mr-4">3</span>
+                            <span>Pass the quiz to unlock your next lesson.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
+                    <div class="bg-white p-4 rounded-lg shadow-2xl w-full max-w-md">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path></svg>
+                        </div>
+                        <h4 class="font-semibold text-lg">Lesson 1: Greetings</h4>
+                        <div class="text-gray-500 mt-2 p-3 bg-gray-50 rounded">
+                            <p>Hello! <span class="cursor-pointer text-indigo-500 hover:underline" title="Sawasdee krap!">สวัสดีครับ</span></p>
+                            <p>My name is Dan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Teacher Dan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
+
